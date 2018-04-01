@@ -1,0 +1,5 @@
+body,html,ul,ol,dl,dt,dd,li,p{margin:0;padding:0;}
+a{text-decoration: none;}
+ul,ol{list-style: none;}
+.clearfix:after{content:"";clear:both;display:block;height:0;overflow:hidden;visibility:hidden;}
+.clearfix{zoom:1;}
