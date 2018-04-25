@@ -179,6 +179,7 @@
                 特色系统</p>
             <p class="list-msg3">...</p>
         </div>
+        <ul>
         <li>
           <div class="index-box6-icon">
             <i></i>
@@ -251,6 +252,7 @@
         <p class="word-b"> Code export</p>
         <p>可输出符合标准的html文档结构及css样式表，便于后期添加个性化功能。</p>
         </li>
+        </ul>
         </div>
   </div>
   
@@ -640,10 +642,13 @@ export default {
 }
 .index-box6 {
   .box2-list {
-    overflow: hidden;
+    
+    ul{
+      overflow: hidden;
+      width:100%;
     li {
      box-sizing: border-box;
-      width: 30%;
+      width: 33%;
       padding: 1%;
       list-style: none;
       float: left;
@@ -674,6 +679,7 @@ export default {
         padding: 10px;
         font-size: 13px;
       }
+    }
     }
   }
 }
