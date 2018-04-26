@@ -126,7 +126,7 @@
     <div class="box2-list">
             <div class="box2-list-msg">
             <p class="list-msg1">CONTENT MANAGEMENT</p>
-            <p class="list-msg1">SYSTEM</p>
+            <p class="list-msg1 msg3">SYSTEM</p>
             <p class="list-msg2">
                 内容管理系统（CMS2.0）</p>
             <p class="list-msg3">...</p>
@@ -182,7 +182,7 @@
         <ul>
         <li>
           <div class="index-box6-icon">
-            <i></i>
+            <i class="box6-icon1"></i>
             </div>
         <p class="word-b">响应式</p>
         <p class="word-b">Responsive </p>
@@ -190,7 +190,7 @@
         </li>
         <li>
           <div class="index-box6-icon">
-            <i></i>
+            <i class="box6-icon2"></i>
             </div>
         <p class="word-b">网络字体</p>
         <p class="word-b">Web fonts</p>
@@ -198,7 +198,7 @@
         </li>
         <li>
           <div class="index-box6-icon">
-            <i></i>
+            <i class="box6-icon3"></i>
             </div>
         <p class="word-b">SVG矢量图形</p>
         <p class="word-b">Vectors</p>
@@ -206,7 +206,7 @@
         </li>
         <li>
           <div class="index-box6-icon">
-            <i></i>
+            <i class="box6-icon4"></i>
             </div>
         <p class="word-b">CSS样式粘贴</p>
         <p class="word-b">Paste CSS</p>
@@ -214,7 +214,7 @@
         </li>
         <li>
           <div class="index-box6-icon">
-            <i></i>
+            <i class="box6-icon5"></i>
             </div>
         <p class="word-b">表单</p>
         <p class="word-b">Forms</p>
@@ -222,7 +222,7 @@
         </li>
         <li>
           <div class="index-box6-icon">
-            <i></i>
+            <i class="box6-icon6"></i>
             </div>
         <p class="word-b">CMS内容管理</p>
         <p class="word-b">CMS</p>
@@ -230,7 +230,7 @@
         </li>
         <li>
           <div class="index-box6-icon">
-            <i></i>
+            <i class="box6-icon7"></i>
             </div>
         <p class="word-b">动画</p>
         <p class="word-b"> Animation</p>
@@ -238,7 +238,7 @@
         </li>
         <li>
           <div class="index-box6-icon">
-            <i></i>
+            <i class="box6-icon8"></i>
             </div>
         <p class="word-b">触发器交互</p>
         <p class="word-b">Interaction</p>
@@ -246,7 +246,7 @@
         </li>
         <li>
           <div class="index-box6-icon">
-            <i></i>
+            <i class="box6-icon9"></i>
             </div>
         <p class="word-b">导出代码</p>
         <p class="word-b"> Code export</p>
@@ -258,7 +258,24 @@
   
   
   
-  
+   <div class=" index-box2  index-box7">
+     <div class="index-box7-shadow">
+    <div class="box2-list">
+            <div class="box2-list-msg">
+            <p class="list-msg1">ABOUT</p>
+            <p class="list-msg2">意派科技</p>
+            <p class="list-msg3">...</p>
+            <p class="list-msg4">意派科技，专注于在线Html5设计工具的研发与运营，研发团队具有十余年的行业经验，目前已推出Epub360、Coolsite360等多款屡获大奖、具有行业影响力的在线设计工具。
+      仅希望通过我们的努力，使创意不受技术的束缚，绽放设计的力量。</p>
+      <div class="box7-down">
+            <div class="box7-left"><a href=""></a></div>
+            <div class="box7-right"><a href=""></a></div>
+            </div>
+        </div>
+        </div>
+        </div>
+  </div>
+  <Footercom />
   </div>
 
 
@@ -267,6 +284,7 @@
 <script>
 import $ from "jquery";
 import Headercom from "@/components/Headercom";
+import Footercom from "@/components/footercom";
 
 export default {
   name: "index",
@@ -308,7 +326,7 @@ export default {
         // console.log(w)
         if (r <= w && r >= 1200) {
           //滚轴到520px时开启动画
-          console.log("下" + r);
+          // console.log("下" + r);
           $(".box2-list-img img").addClass("box2-list-imgshow");
           // alert("aaa")
         } else {
@@ -322,7 +340,8 @@ export default {
   },
 
   components: {
-    Headercom
+    Headercom,
+    Footercom
     // index02,
   }
 };
@@ -486,7 +505,7 @@ export default {
     font-family: Roboto;
     // margin-bottom: 25px;
     font-weight: lighter;
-    font-size: 60px;
+    font-size: 50px;
     color: rgb(74, 134, 232);
   }
   .list-msg2 {
@@ -608,6 +627,9 @@ export default {
   width: 100% !important;
 }
 .index-box5 {
+  .msg3 {
+    margin-top: 0;
+  }
   .box2-list div:first-child {
     background-color: #000;
   }
@@ -642,44 +664,137 @@ export default {
 }
 .index-box6 {
   .box2-list {
-    
-    ul{
+    ul {
       overflow: hidden;
-      width:100%;
-    li {
-     box-sizing: border-box;
-      width: 33%;
-      padding: 1%;
-      list-style: none;
-      float: left;
-      text-align: center;
-      min-height: 250px;
-      max-height: 263px;
-      margin-bottom:30px;
-      .word-b{
-             font-weight: bolder;
-             font-size: 18px;
-      }
-      .index-box6-icon {
-        width: 100%;
-        height: auto;
-        padding-bottom: 10px;
-        margin: 0 auto;
-        i {
-          display: block;
+      width: 100%;
+      li {
+        box-sizing: border-box;
+        width: 33%;
+        padding: 1%;
+        list-style: none;
+        float: left;
+        text-align: center;
+        min-height: 250px;
+        max-height: 263px;
+        margin-bottom: 30px;
+        .word-b {
+          font-weight: bolder;
+          font-size: 18px;
+        }
+        .index-box6-icon {
+          width: 100%;
+          height: auto;
+          padding-bottom: 10px;
           margin: 0 auto;
-          width: 100px;
-          height: 100px;
-          background: url(../icon/index-icon1.png)center center no-repeat;
-          background-size: 100%;
+          i {
+            display: block;
+            margin: 0 auto;
+            width: 100px;
+            height: 100px;
+            // background: url(../icon/index-icon1.png)center center no-repeat;
+            // background-size: 100%;
+          }
+          .box6-icon1 {
+            background: url(../icon/index-icon1.png)center center no-repeat;
+            background-size: 100%;
+          }
+          .box6-icon2 {
+            background: url(../icon/index-icon2.png)center center no-repeat;
+            background-size: 100%;
+          }
+          .box6-icon3 {
+            background: url(../icon/index-icon3.png)center center no-repeat;
+            background-size: 100%;
+          }
+          .box6-icon4 {
+            background: url(../icon/index-icon4.png)center center no-repeat;
+            background-size: 100%;
+          }
+          .box6-icon5 {
+            background: url(../icon/index-icon5.png)center center no-repeat;
+            background-size: 100%;
+          }
+          .box6-icon6 {
+            background: url(../icon/index-icon6.png)center center no-repeat;
+            background-size: 100%;
+          }
+          .box6-icon7 {
+            background: url(../icon/index-icon7.png)center center no-repeat;
+            background-size: 100%;
+          }
+          .box6-icon8 {
+            background: url(../icon/index-icon8.png)center center no-repeat;
+            background-size: 100%;
+          }
+          .box6-icon9 {
+            background: url(../icon/index-icon9.png)center center no-repeat;
+            background-size: 100%;
+          }
+        }
+        p {
+          box-sizing: border-box;
+          padding: 10px;
+          font-size: 13px;
         }
       }
-      p {
-        box-sizing: border-box;
-        padding: 10px;
-        font-size: 13px;
+    }
+  }
+}
+.index-box7 {
+  background-color: rgba(0, 0, 0, 0);
+  padding-top: 0;
+  background: url(../image/index-down-bg.png)center center no-repeat;
+  .index-box7-shadow {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  .box2-list div:first-child {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  .box7-down {
+    width: 100% !important;
+    height: 80px !important;
+    margin: 0 auto;
+    margin-top: 50px;
+    .box7-left {
+      width: 50%;
+      height: 80px !important;
+      // overflow: hidden;
+      position: relative;
+
+      :after {
+        content: "";
+        position: absolute;
+        right: 0;
+        background-color: rgb(110, 110, 110);
+        width: 1px;
+        height: 80px;
+        top: 0;
+      }
+      a {
+        display: block;
+        width: 180px;
+        height: 30px;
+        background: url(../icon/box7-left.png)center center no-repeat;
+        background-size: 100%;
+        // float: right;
+        padding: 23px;
+        margin-left: 50%;
       }
     }
+    .box7-right {
+      width: 50%;
+      height: 80px !important;
+      background-color: rgba(0, 0, 0, 0) !important;
+      a {
+        display: block;
+        width: 180px;
+        height: 30px;
+        background: url(../icon/box7-right.png)center center no-repeat;
+        background-size: 100%;
+        padding: 23px;
+        margin-left: 10%;
+      }
     }
   }
 }

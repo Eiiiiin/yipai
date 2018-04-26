@@ -12,7 +12,7 @@ import Index07 from '@/page/index07'
 import Index08 from '@/page/index08'
 import Index09 from '@/page/index09'
 import Index10 from '@/page/index10'
-
+import Footercom from '@/components/footercom'
 
 Vue.use(Router)
 
