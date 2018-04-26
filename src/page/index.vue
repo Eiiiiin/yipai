@@ -74,9 +74,6 @@
       </div>
 
 
-
-
-
   <div class=" index-box2 index-box4">
     <div class="box2-list">
             <div class="box2-list-msg">
@@ -255,8 +252,6 @@
         </ul>
         </div>
   </div>
-  
-  
   
    <div class=" index-box2  index-box7">
      <div class="index-box7-shadow">
@@ -578,12 +573,13 @@ export default {
       border-radius: 6px;
       color: rgb(222, 222, 222);
       margin: 0 auto;
+      transition: all 1s ease;
     }
-    // :hover{
-    //   background-color: #428bca;
-    //   border-color: #357ebd;
-    //   color:#fff;
-    //   }
+    a:hover{
+      background-color: #428bca;
+      border-color: #357ebd;
+      color:#fff;
+      }
   }
 }
 .index-box4-bottom {
