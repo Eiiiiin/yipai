@@ -15,6 +15,7 @@
      </div>
    </div>
   </div>
+  
 </template>
 
 <script>
@@ -120,11 +121,11 @@ export default {
   position: fixed;
   top: 0;
   z-index: 10;
+
   .top {
-    margin: 0 auto;
-    width: 80%;
-    min-width: 960px;
     height: 76px;
+    max-width:1200px;
+margin:0 auto;
     .logo {
       float: left;
       cursor: pointer;

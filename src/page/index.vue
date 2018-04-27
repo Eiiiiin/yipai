@@ -2,6 +2,7 @@
   <div>
     <Headercom />
     <div class="index-box1">
+      <div style="height:76px;"></div>
       <div class="shadowbox"></div>
         <!-- <img src="../image/index-all.png" alt=""> -->
         <div class="box1-word">
