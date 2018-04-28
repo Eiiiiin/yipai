@@ -6,7 +6,7 @@
      <div class="reg-main">
       <div class="main-box">
         <div class="main-tittle">
-          <h1>reg</h1>
+          <h1>SIGN UP </h1>
           <h3>登录</h3>
           <p class="tip">用户名或密码错误</p>
         </div>
@@ -14,13 +14,16 @@
           <div class="box-left">
             <p>邮箱:</p>
               <input class="yx" type="text"   value=""  placeholder="请输入注册邮箱">
-              <span>显示成功</span>
+              <span class="shadowspan yx-tip">请输入正确的邮箱地址!</span>
               <p>密码:</p>
-              <input type="text" placeholder="请输入密码">
+              <input class="psw-input" type="password" placeholder="请输入密码">
+              <span class="shadowspan psw-tip">密码长度不能少于5</span>
               <p>确认密码:</p>
-              <input type="text" placeholder="请在次输入密码">
+              <input class="psw-input-ag"  type="password" placeholder="请在次输入密码">
+              <span class="shadowspan psw-tip-ag">两次密码不一致!</span>
               <p>昵称:</p>
-              <input type="text" placeholder="昵称">
+              <input class="nickname-input" type="text" placeholder="昵称">
+              <span class="shadowspan nickname-tip">昵称不能为空</span>
               <p>验证码:</p>
               <input class="verification" type="text" placeholder="验证码">
 
@@ -50,7 +53,6 @@
 import Headercom from "@/components/Headercom";
 import Footercom from "@/components/footercom";
 import $ from "jquery";
-
 export default {
   name: 'index03',
   data () {
@@ -58,19 +60,55 @@ export default {
      
     }
   },
-  methods:{
-    mounted() {
+  methods:{},
+    
+    mounted(){
     $(document).ready(()=>{
+      var count=0;
       $('.yx').change(()=>{
-        alert("aaa")
-      })
+        // $('.yx-tip').css("display","block")
+        var yxVal = $('.yx').val();
+        var yxReg = /^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
+        if(yxReg.test(yxVal)){
+          $('.yx-tip').css("display","none");
+          // count++;
+        }else{
+          $('.yx-tip').css("display","block");
+          // $('.yx-tip').text("请输入正确的邮箱地址");
+        }
+      })//邮箱验证
+
+    $('.psw-input').change(()=>{
+      var pswVal = $('.psw-input').val();
+      var pswReg = /^[0-9&-]{4,20}$/g;
+      if(pswReg.test(pswVal)){
+        $('.psw-tip').css("display","none");
+      }else
+      $('.psw-tip').css("display","block");
+      // $('.psw-tip').text("密码长度不能少于5")
+    })
+
+    $('.psw-input-ag').change(()=>{
+      var pswVal = $('.psw-input').val();
+      var pswagVal = $('.psw-input-ag').val();
+      if(pswagVal === pswVal){
+        $('.psw-tip-ag').css("display","none");
+      }else{
+        $('.psw-tip-ag').css("display","block");
+      }
+    })
+
+$('.nickname-input').change(()=>{
+  var ncnameVal = $('.nickname-input').val();
+  if(!ncnameVal){
+    $('.nickname-tip').css('display','block')
+  }
+})
     });
-  $(document).ready(function(){
-    alert("aaa")
-  })
  
-    }
-  },
+
+    },
+ 
   components:{
     Headercom,
     Footercom
@@ -149,6 +187,12 @@ body,html,h1,h2,h3,h4,h5,ul,li,a,p {
           box-sizing: border-box;
           -webkit-box-sizing: border-box;
           margin-bottom:10px;
+      }
+      .shadowspan{
+        display: none;
+        padding:5px;
+        padding-bottom:10px;
+        color: #d9534f;
       }
       .p-box{
         position: relative;
