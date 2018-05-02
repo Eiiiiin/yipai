@@ -338,7 +338,6 @@ export default {
   components: {
     Headercom,
     Footercom
-    // index02,
   }
 };
 </script>
